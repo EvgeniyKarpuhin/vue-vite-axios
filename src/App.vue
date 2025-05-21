@@ -1,5 +1,5 @@
 <script>
-import Stocks from './components/Stocks.vue'
+import Stocks from './components/Stocks.vue';
 
 export default {
   components: {
