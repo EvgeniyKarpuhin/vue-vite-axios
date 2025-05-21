@@ -14,7 +14,3 @@ export default {
     <Stocks />
   </div>
 </template>
-
-<style scoped>
-
-</style>
