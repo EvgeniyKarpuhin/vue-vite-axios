@@ -1,5 +1,11 @@
-<script setup>
+<script>
 import Stocks from './components/Stocks.vue'
+
+export default {
+  components: {
+    Stocks
+  }
+}
 </script>
 
 <template>
