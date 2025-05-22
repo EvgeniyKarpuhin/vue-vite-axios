@@ -10,7 +10,7 @@ export default {
 
 <template>
   <div class="container">
-    <h2 class="title">Stock App</h2>
+    <h2 class="title">Сompany shares</h2>
     <Stocks />
   </div>
 </template>

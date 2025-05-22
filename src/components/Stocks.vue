@@ -13,6 +13,14 @@
       <span class="stock-info__price">{{ value.price }} $</span>
     </div>
   </div>
+  <h3>Get Info</h3>
+  <select v-model="selected">
+    <option value="" disabled>Select Company</option>
+    <option v-for="value in stock" :key="value.stock" :value="value.description">{{ value.companyName }}</option>
+  </select>
+  <div class="info">
+    {{ selected }}
+  </div>
 </template>
 
 <script>
@@ -23,11 +31,12 @@
     data() {
       return {
         stock: [],
-        errors: []
+        errors: [],
+        selected: ''
       }
     },
     created() {
-      axios.get('https://financialmodelingprep.com/api/v3/profile/IAA,nvda,tsla,amd,PAAS,mdb,spce,v,dal,docu,okta,amzn,pins,trip,gody,dis,mcd,nok,upwk,ibm,fb,zm,ozon,nflx,ea,hlt,h,ccl,AAL?apikey=am5EQKRswL2RI6eIN8ENMe2B1H485eNj')
+      axios.get('https://financialmodelingprep.com/api/v3/profile/IAA,NVDA,TSLA,AMD,PAAS,mdb,spce,DIAAF,dal,docu,okta,amzn,pins,trip,gody,dis,mcd,GCAAF,UPWK,IBM,JVAAX,ZM,OZON,NFLX,EA,hlt,h,ccl,AAL?apikey=am5EQKRswL2RI6eIN8ENMe2B1H485eNj')
       .then(responce => {
         this.stock = responce.data
         console.log(responce)
